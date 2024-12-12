@@ -6,23 +6,23 @@ from collections import Counter
 import pandas as pd
 import os
 import re
-from docx import Document  # For reading .docx files
-import PyPDF2  # For reading .pdf files
+from docx import Document  
+import PyPDF2  
 
 class DocumentReader(tk.Tk):
     def __init__(self):
         super().__init__()
 
         self.title("Document Reader")
-        self.geometry("500x700")  # Set a larger window size for better spacing
-        self.config(bg="#0d2d2f")  # Light background
+        self.geometry("500x700")  # Set window size 
+        self.config(bg="#0d2d2f")  # Set background color
 
         # Font and color settings
         self.font_style = ("Helvetica", 12)
-        self.font_color_white = "#FFFFFF"  # White text for labels
-        self.font_color_black = "#000000"  # Black text for input and output areas
-        self.bg_color = "#0d2d2f"  # Light background color
-        self.entry_width = 50  # Set a consistent width for entries
+        self.font_color_white = "#FFFFFF"  # Text color for application labels
+        self.font_color_black = "#000000"  # Text color for input and output text
+        self.bg_color = "#0d2d2f"  # Set background color
+        self.entry_width = 50  # Set width for input/output text fields
         
         # Create GUI components
         self.create_widgets()
@@ -37,17 +37,17 @@ class DocumentReader(tk.Tk):
         self.open_button = tk.Button(self, image=self.image1, command=self.open_file)
         self.open_button.grid(row=0, column=0, pady=10, padx=20, sticky="w")
 
-        # GUI text input field (Black text)
+        # GUI text input field 
         self.text_area = ScrolledText(self, wrap='word', height=8, width=50, font=self.font_style, bg="#E0F2F1", fg=self.font_color_black)  # Black text
         self.text_area.grid(row=1, column=0, pady=10, padx=20)
 
-        # GUI "Include Terms" label (White text)
+        # GUI field to search specific terms to count
         self.include_terms_label = tk.Label(self, text="Enter Terms to Include in Your Search (comma separated):", font=self.font_style, bg=self.bg_color, fg=self.font_color_white)
         self.include_terms_label.grid(row=2, column=0, pady=5, padx=20, sticky="w")
         self.include_terms_entry = tk.Entry(self, width=self.entry_width, font=self.font_style, fg=self.font_color_black)
         self.include_terms_entry.grid(row=3, column=0, pady=5, padx=20, sticky="w")
 
-        # GUI "Exclude Terms" label (White text)
+        # GUI field to exclude specific terms from count
         self.exclude_terms_label = tk.Label(self, text="Enter Terms to Exclude from Your Search (comma separated):", font=self.font_style, bg=self.bg_color, fg=self.font_color_white)
         self.exclude_terms_label.grid(row=4, column=0, pady=5, padx=20, sticky="w")
         self.exclude_terms_entry = tk.Entry(self, width=self.entry_width, font=self.font_style, fg=self.font_color_black)
@@ -61,7 +61,7 @@ class DocumentReader(tk.Tk):
         self.export_button = tk.Button(self, image=self.image3, command=self.export_to_excel)
         self.export_button.grid(row=7, column=0, pady=10, padx=20, sticky="w")
 
-        # GUI text output field (Black text)
+        # GUI text output field 
         self.text_area_out = ScrolledText(self, wrap='word', height=10, width=50, font=self.font_style, bg="#E0F2F1", fg=self.font_color_black)  # Black text
         self.text_area_out.grid(row=8, column=0, pady=10, padx=20)
 
@@ -71,6 +71,7 @@ class DocumentReader(tk.Tk):
         self.exclude_terms = set()
 
     def open_file(self):
+        # "Read File" prompts the user to choose a document
         file_path = filedialog.askopenfilename(filetypes=[
             ("Text Files", "*.txt"),
             ("Word Documents", "*.docx"),
@@ -105,19 +106,25 @@ class DocumentReader(tk.Tk):
             messagebox.showerror("Error", f"Failed to read file: {e}")
 
     def count_words(self):
+        # Prompts a count of unique terms in a set of text
+
+        # Converts words to lowercase to ensure single counts of unique terms
         content = self.text_area.get("1.0", tk.END).strip().lower()
 
         # Remove symbols, punctuation, and numbers
         content = re.sub(r'[^a-z\s]', '', content)
-
+        
+        # Field to include specific terms to count
         include_terms_input = self.include_terms_entry.get().strip().lower()
         self.include_terms = set(include_terms_input.split(',')) if include_terms_input else set()
 
+        # Field to exclude specific terms from count
         exclude_terms_input = self.exclude_terms_entry.get().strip().lower()
         self.exclude_terms = set(exclude_terms_input.split(',')) if exclude_terms_input else set()
 
         words = content.split()
 
+        # Show all terms if neither include or exclude field is used
         if not self.include_terms:
             filtered_words = [word for word in words if word not in self.exclude_terms]
         else:
@@ -129,15 +136,18 @@ class DocumentReader(tk.Tk):
         self.display_word_count()
 
     def display_word_count(self):
+        # Show word count with included and excluded terms if applicable
         if self.word_count:
             self.text_area_out.delete(1.0, tk.END)
             self.text_area_out.insert(tk.END, "Word Counts (Filtered by Include and Exclude Terms):\n\n")
 
+            # Sort output list alphabetically
             sorted_word_count = sorted(self.word_count.items())
             for word, count in sorted_word_count:
                 self.text_area_out.insert(tk.END, f"{word}: {count}\n")
 
     def export_to_excel(self):
+        # Download word and count list to a spreadsheet
         if not self.word_count:
             messagebox.showwarning("Warning", "Count words before exporting.")
             return
