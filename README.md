@@ -11,19 +11,7 @@ This project was created to count unique terms in text. The user can choose a te
 ### Dependencies
 
 * This program was built with Windows 10
-* Libraries used:
-    tkinter
-      PhotoImage
-      filedialog, messagebox
-      ScrolledText
-    collections 
-      Counter
-    pandas
-    os
-    re
-    docx 
-      Document
-    PyPDF2
+* Libraries used: tkinter (PhotoImage, filedialog, messagebox, ScrolledText); collections (Counter); pandas; os; re; docx (Document); PyPDF2
 
 ### Using the program
 
@@ -33,14 +21,6 @@ This project was created to count unique terms in text. The user can choose a te
 * If you want to search for specific terms, enter those terms in the search field for included terms and click the "Count" button to see a list of only the specified terms and their counts.
 * If you want to exclude specific terms from your search (e.g., the, and, etc.), enter those terms in the search field for excluded terms and click the "Count" button to see a list of unique terms and their counts that don't include the terms you specified.
 * You can copy/paste out of the text output field, or you can click the "Download" button to export the list of terms and counts to a spreadsheet and save it on your computer.
-```
-
-## Authors
-
-Contributors 
-
-Chris Harding  
-
 
 ## Caveats
 
@@ -53,5 +33,7 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE.
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
+* Chris Harding (Thank you!)
 * [readme-template](https://github.com/dompizzie/readme-template)
+  
 
