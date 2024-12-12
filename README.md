@@ -1,6 +1,6 @@
 # Project Title
 
-Document Word Counter
+Word Counter
 
 ## Description
 
@@ -32,7 +32,6 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE.
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
 * Chris Harding (Thank you!)
 * [readme-template](https://github.com/dompizzie/readme-template)
   
