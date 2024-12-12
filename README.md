@@ -49,7 +49,7 @@ This project was created to count unique terms in text. The user can choose a te
 
 ## License
 
-This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE.md file for details
+This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE file for details
 
 ## Acknowledgments
 
