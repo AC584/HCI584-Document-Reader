@@ -17,27 +17,29 @@ This project was created to count unique terms in text. The user can choose a te
 
 * Open the program
 
-* ![FinalBase](https://github.com/user-attachments/assets/6fed6411-468c-4fe0-9e45-cd9056fcec96)
+![FinalBase](https://github.com/user-attachments/assets/6fed6411-468c-4fe0-9e45-cd9056fcec96)
 
 * If you want to use manual text, you can either type into the text input field or copy/paste your text into the text input field. Alternatively, you can click the "Read File" button to load a document with text from your computer.
 
-* ![textinputfield](https://github.com/user-attachments/assets/9253510a-3094-4ec7-9ab0-148bc4efc85f)
+![textinputfield](https://github.com/user-attachments/assets/9253510a-3094-4ec7-9ab0-148bc4efc85f)
+
+![readfile](https://github.com/user-attachments/assets/14af70bb-e74b-408f-9aff-4cb9199e28d3)
 
 * If you want a simple count of your manual text or opened document, click the "Count" button to see a list of unique terms from the text input field.
 
-* ![countwords](https://github.com/user-attachments/assets/75f4dd97-b643-4152-8033-b19d204809cf)
+![countwords](https://github.com/user-attachments/assets/75f4dd97-b643-4152-8033-b19d204809cf)
 
 * If you want to search for specific terms, enter those terms in the search field for included terms and click the "Count" button to see a list of only the specified terms and their counts.
 
-* ![includeterms](https://github.com/user-attachments/assets/dad6846c-20bc-403f-b1ac-d0255fdc414c)
+![includeterms](https://github.com/user-attachments/assets/dad6846c-20bc-403f-b1ac-d0255fdc414c)
 
 * If you want to exclude specific terms from your search (e.g., the, and, etc.), enter those terms in the search field for excluded terms and click the "Count" button to see a list of unique terms and their counts that don't include the terms you specified.
 
-* ![excludeterms](https://github.com/user-attachments/assets/94d86adf-4679-4a6e-8cb4-5126ae89f9bf)
+![excludeterms](https://github.com/user-attachments/assets/94d86adf-4679-4a6e-8cb4-5126ae89f9bf)
 
 * You can copy/paste out of the text output field, or you can click the "Download" button to export the list of terms and counts to a spreadsheet and save it on your computer.
 
-* ![download](https://github.com/user-attachments/assets/ae474eea-04c5-404b-baf7-f51bfcef46d3)
+![download](https://github.com/user-attachments/assets/ae474eea-04c5-404b-baf7-f51bfcef46d3)
 
 ## Caveats
 
