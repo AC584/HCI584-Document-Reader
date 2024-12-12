@@ -19,10 +19,12 @@ This project was created to count unique terms in text. The user can choose a te
 
 ![FinalBase](https://github.com/user-attachments/assets/6fed6411-468c-4fe0-9e45-cd9056fcec96)
 
-* If you want to use manual text, you can either type into the text input field or copy/paste your text into the text input field. Alternatively, you can click the "Read File" button to load a document with text from your computer.
+* If you want to use manual text, you can either type into the text input field or copy/paste your text into the text input field. 
 
 ![textinputfield](https://github.com/user-attachments/assets/9253510a-3094-4ec7-9ab0-148bc4efc85f)
 
+* Alternatively, you can click the "Read File" button to load a document with text from your computer.
+  
 ![readfile](https://github.com/user-attachments/assets/14af70bb-e74b-408f-9aff-4cb9199e28d3)
 
 * If you want a simple count of your manual text or opened document, click the "Count" button to see a list of unique terms from the text input field.
