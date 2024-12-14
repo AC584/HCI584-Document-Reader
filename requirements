@@ -1,5 +1,7 @@
+# Requirements and Versions
 
 * This program was built with Windows 10
+
 * Libraries: Tkinter
 * Modules: collections, os, re
 * Packages:
