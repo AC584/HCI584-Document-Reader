@@ -54,6 +54,6 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE 
 ## Acknowledgments
 
 * Chris Harding (Thank you!)
-* [readme-template]([https://github.com/dompizzie/readme-template](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc))
+* [readme-template][[(https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc))](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)]](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
   
 
