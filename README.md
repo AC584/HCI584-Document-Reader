@@ -8,10 +8,15 @@ This project was created to count unique terms in text. The user can choose a te
 
 ## Getting Started
 
-### Dependencies
+### Requirements
 
 * This program was built with Windows 10
-* Libraries used: tkinter (PhotoImage, filedialog, messagebox, ScrolledText); collections (Counter); pandas; os; re; docx (Document); PyPDF2
+* Libraries: Tkinter
+* Modules: collections, os, re
+* Packages:
+    pandas==2.2.1
+    python-docx==1.1.2
+    PyPDF2==3.0.1
 
 ### Using the program
 
