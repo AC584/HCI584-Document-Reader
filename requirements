@@ -7,4 +7,5 @@
     python-docx>=1.1.2
     PyPDF2>=3.0.1
 
-For packages, you must first install the package (e.g., %pip install pandas). Once installed, you need to import the package in order to use it
+For packages, you must first install the package (e.g., %pip install pandas). 
+Once installed, you need to import the package in order to use it
